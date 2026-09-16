@@ -1,3 +1,7 @@
+
+import re
+
+
 class NewsAgent:
     """
     News Agent analyzes stock market news
@@ -32,6 +36,13 @@ class NewsAgent:
             "drop": 1
         }
 
+        self.negation_words = {
+            "not",
+            "no",
+            "never",
+            "without"
+        }
+
     def analyze_news(self, news):
 
         news = news.lower()
@@ -42,47 +53,61 @@ class NewsAgent:
         positive_matches = []
         negative_matches = []
 
-        # Positive analysis
-        for word, weight in self.positive_words.items():
+        # Tokenize news text
+        words = re.findall(r"\b\w+\b", news)
 
-            if word in news:
+        # Sentiment analysis with negation handling
+        for index, word in enumerate(words):
 
-                positive_score += weight
-                positive_matches.append(word)
+            previous_words = words[max(0, index - 3):index]
 
-        # Negative analysis
-        for word, weight in self.negative_words.items():
+            is_negated = any(
+                negation in previous_words
+                for negation in self.negation_words
+            )
 
-            if word in news:
+            if word in self.positive_words:
 
-                negative_score += weight
-                negative_matches.append(word)
+                weight = self.positive_words[word]
+
+                if is_negated:
+                    negative_score += weight
+                    negative_matches.append(
+                        f"not_{word}"
+                    )
+                else:
+                    positive_score += weight
+                    positive_matches.append(word)
+
+            elif word in self.negative_words:
+
+                weight = self.negative_words[word]
+
+                if is_negated:
+                    positive_score += weight
+                    positive_matches.append(
+                        f"not_{word}"
+                    )
+                else:
+                    negative_score += weight
+                    negative_matches.append(word)
 
         # Sentiment decision
         if positive_score > negative_score:
-
             sentiment = "Positive"
 
         elif negative_score > positive_score:
-
             sentiment = "Negative"
 
         else:
-
             sentiment = "Neutral"
 
         return {
-
             "news": news,
-
             "sentiment": sentiment,
-
             "positive_score": positive_score,
-
             "negative_score": negative_score,
-
             "positive_words_found": positive_matches,
-
             "negative_words_found": negative_matches
         }
 
