@@ -35,6 +35,16 @@ def home():
     # ======================================
 
     stock_result = get_stock_data(symbol)
+    
+    if stock_result.get("status") == "error":
+        return render_template(
+            "error.html",
+            symbol=symbol,
+            error=stock_result.get(
+                "error",
+                "Invalid stock symbol or data unavailable."
+            )
+        )
 
 
     # ======================================
