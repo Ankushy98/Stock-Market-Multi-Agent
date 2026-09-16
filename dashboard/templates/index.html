@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Market Multi-Agent Dashboard</title>
+
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+        }
+
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+
+        .stock-card,
+        .card,
+        .news-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .stock-card {
+            text-align: center;
+        }
+
+
+        .price {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+
+        .change {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+
+        .value {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+
+        .confidence {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+
+        .news-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+
+        .pipeline {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+
+        .pipeline-step {
+            background: #f4f6f8;
+            padding: 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+
+        .pipeline-step strong {
+            display: block;
+            margin-top: 5px;
+        }
+
+
+        .pipeline-step span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+
+        .pipeline-arrow {
+            text-align: center;
+            font-size: 22px;
+            margin: 3px 0;
+        }
+
+
+        .search-input {
+            padding: 12px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+
+        .search-button {
+            padding: 12px 20px;
+            margin-left: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #1f2937;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
+        .search-button:hover {
+            opacity: 0.9;
+        }
+
+
+        canvas {
+            max-height: 400px;
+        }
+
+
+        pre {
+            background: #f4f6f8;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ====================================== -->
+    <!-- HEADER -->
+    <!-- ====================================== -->
+
+    <header>
+
+        <h1>📊 Stock Market Multi-Agent System</h1>
+
+        <p>
+    News Analysis • Market Data • ML Prediction • Trend Analysis • Decision System
+</p>
+
+    </header>
+
+
+
+    <div class="container">
+
+
+        <!-- ====================================== -->
+        <!-- STOCK SEARCH -->
+        <!-- ====================================== -->
+
+        <div class="stock-card">
+
+            <h2>🔎 Analyze Stock</h2>
+
+
+            <form method="GET" action="/">
+
+                <input
+    type="text"
+    name="symbol"
+    placeholder="RELIANCE.NS"
+    value="{{ data.symbol }}"
+    class="search-input"
+>
+                >
+
+
+                <button
+                    type="submit"
+                    class="search-button"
+                >
+                    Analyze
+                </button>
+
+            </form>
+
+
+            <p style="color: #666;">
+    The current ML model is trained on Reliance Industries
+    historical data.
+</p>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- STOCK INFORMATION -->
+        <!-- ====================================== -->
+
+        <div class="stock-card">
+
+            <h2>{{ data.symbol }}</h2>
+
+
+            <div class="price">
+
+                ₹{{ data.price }}
+
+            </div>
+
+
+            <div class="change">
+
+                Daily Change:
+                {{ data.change_percent }}%
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- STOCK PRICE CHART -->
+        <!-- ====================================== -->
+
+        <div class="card">
+
+            <h2>📈 Stock Price Chart - 1 Month</h2>
+
+
+            <canvas
+                id="stockChart"
+                data-dates='{{ data.chart_dates | tojson | safe }}'
+                data-prices='{{ data.chart_prices | tojson | safe }}'
+            ></canvas>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- CHART.JS -->
+        <!-- ====================================== -->
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+        <!-- ====================================== -->
+        <!-- STOCK CHART SCRIPT -->
+        <!-- ====================================== -->
+
+        <script>
+
+            const chartElement =
+                document.getElementById("stockChart");
+
+
+            const chartDates =
+                JSON.parse(
+                    chartElement.dataset.dates
+                );
+
+
+            const chartPrices =
+                JSON.parse(
+                    chartElement.dataset.prices
+                );
+
+
+            new Chart(
+                chartElement,
+                {
+
+                    type: "line",
+
+
+                    data: {
+
+                        labels: chartDates,
+
+
+                        datasets: [
+
+                            {
+
+                                label:
+                                    "{{ data.symbol }} Closing Price",
+
+                                data:
+                                    chartPrices,
+
+                                borderWidth: 2,
+
+                                tension: 0.3,
+
+                                fill: false
+
+                            }
+
+                        ]
+
+                    },
+
+
+                    options: {
+
+                        responsive: true,
+
+
+                        plugins: {
+
+                            legend: {
+
+                                display: true
+
+                            }
+
+                        },
+
+
+                        scales: {
+
+                            x: {
+
+                                title: {
+
+                                    display: true,
+
+                                    text: "Date"
+
+                                }
+
+                            },
+
+
+                            y: {
+
+                                title: {
+
+                                    display: true,
+
+                                    text: "Price"
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+            );
+
+        </script>
+
+
+
+        <!-- ====================================== -->
+        <!-- MULTI-AGENT PIPELINE -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🔄 Multi-Agent Pipeline</h2>
+
+
+            <div class="pipeline">
+
+                📰 News
+                →
+                📊 Market
+                →
+                📈 Trend
+                →
+                🤖 ML
+                →
+                🎯 Decision
+
+            </div>
+
+
+
+            <div class="grid">
+
+
+                <!-- NEWS AGENT -->
+
+                <div class="card">
+
+                    <h3>📰 News Agent</h3>
+
+
+                    <div class="value">
+
+                        {{ data.news_agent }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MARKET AGENT -->
+
+                <div class="card">
+
+                    <h3>📊 Market Agent</h3>
+
+
+                    <div class="value">
+
+                        {{ data.market_agent }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TREND AGENT -->
+
+                <div class="card">
+
+                    <h3>📈 Trend Agent</h3>
+
+
+                    <div class="value">
+
+                        {{ data.trend_agent }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DECISION AGENT -->
+
+                <div class="card">
+
+                    <h3>🎯 Decision Agent</h3>
+
+
+                    <div class="value">
+
+                        {{ data.decision_agent }}
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- AGENT RESULTS -->
+        <!-- ====================================== -->
+
+        <div class="grid">
+
+
+            <!-- ML PREDICTION -->
+
+            <div class="card">
+
+                <h3>🤖 ML Prediction</h3>
+
+
+                <div class="value">
+
+                    {{ data.ml_prediction }}
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MARKET TREND -->
+
+            <div class="card">
+
+                <h3>📈 Market Trend</h3>
+
+
+                <div class="value">
+
+                    {{ data.trend }}
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MODEL SIGNAL -->
+
+            <div class="card">
+
+                <h3>🎯 Model Signal</h3>
+
+
+                <div class="value">
+
+                    {{ data.decision }}
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONFIDENCE -->
+
+            <div class="card">
+
+                <h3>📊 Confidence</h3>
+
+
+                <div class="confidence">
+
+                    {{ data.confidence }}%
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- LATEST NEWS -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>📰 Latest Market News</h2>
+
+
+            {% if data.news %}
+
+
+                {% for news in data.news %}
+
+                    <div class="news-item">
+
+                        {{ news }}
+
+                    </div>
+
+                {% endfor %}
+
+
+            {% else %}
+
+
+                <p>
+
+                    No news available.
+
+                </p>
+
+
+            {% endif %}
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- NEWS SENTIMENT -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🧠 News Sentiment Analysis</h2>
+
+
+            <div class="grid">
+
+
+                <!-- POSITIVE -->
+
+                <div class="card">
+
+                    <h3>🟢 Positive News</h3>
+
+
+                    <div class="value">
+
+                        {{ data.positive_news }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEGATIVE -->
+
+                <div class="card">
+
+                    <h3>🔴 Negative News</h3>
+
+
+                    <div class="value">
+
+                        {{ data.negative_news }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEUTRAL -->
+
+                <div class="card">
+
+                    <h3>⚪ Neutral News</h3>
+
+
+                    <div class="value">
+
+                        {{ data.neutral_news }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OVERALL -->
+
+                <div class="card">
+
+                    <h3>📌 Overall Sentiment</h3>
+
+
+                    <div class="value">
+
+                        {{ data.news_sentiment }}
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- DECISION EXPLANATION -->
+        <!-- ====================================== -->
+
+        <div class="card">
+
+            <h3>💡 Decision Explanation</h3>
+
+
+            <p>
+
+                {{ data.decision_reason }}
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- AGENT PIPELINE STATUS -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🔄 Multi-Agent Workflow</h2>
+
+
+            <div class="pipeline">
+
+
+                <div class="pipeline-step">
+
+                    📰
+
+                    <strong>
+                        News Agent
+                    </strong>
+
+                    <span>
+                        ✅ Completed
+                    </span>
+
+                </div>
+
+
+                <div class="pipeline-arrow">
+
+                    ↓
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    📊
+
+                    <strong>
+                        Market Agent
+                    </strong>
+
+                    <span>
+                        ✅ Completed
+                    </span>
+
+                </div>
+
+
+                <div class="pipeline-arrow">
+
+                    ↓
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    📈
+
+                    <strong>
+                        Trend Agent
+                    </strong>
+
+                    <span>
+                        ✅ Completed
+                    </span>
+
+                </div>
+
+
+                <div class="pipeline-arrow">
+
+                    ↓
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    🤖
+
+                    <strong>
+                        ML Prediction Agent
+                    </strong>
+
+                    <span>
+                        ✅ Completed
+                    </span>
+
+                </div>
+
+
+                <div class="pipeline-arrow">
+
+                    ↓
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    🎯
+
+                    <strong>
+                        Decision Agent
+                    </strong>
+
+                    <span>
+                        ✅ Completed
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- AGENT AUDIT TRAIL -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🔍 Agent Audit Trail</h2>
+
+
+            {% if data.audit_logs %}
+
+
+                {% for log in data.audit_logs | reverse %}
+
+
+                    <div class="news-item">
+
+
+                        <strong>
+
+                            🤖 {{ log.agent }}
+
+                        </strong>
+
+
+                        <br>
+
+
+                        <small>
+
+                            🕒 {{ log.timestamp }}
+
+                        </small>
+
+
+                        <pre>
+{{ log.result | tojson(indent=2) }}
+                        </pre>
+
+
+                    </div>
+
+
+                {% endfor %}
+
+
+            {% else %}
+
+
+                <p>
+
+                    No audit logs available.
+
+                </p>
+
+
+            {% endif %}
+
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- ML MODEL ANALYSIS -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🤖 ML Model Analysis</h2>
+
+
+           <p>
+    The current machine-learning pipeline is trained and evaluated
+    using historical Reliance Industries stock data.
+</p>
+
+
+
+            <div class="news-item">
+
+                <strong>
+                    Random Forest
+                </strong>
+
+
+                <p>
+
+                    Primary model used by the
+                    prediction agent.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="news-item">
+
+                <strong>
+                    Decision Tree
+                </strong>
+
+
+                <p>
+
+                    Baseline tree-based comparison model.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="news-item">
+
+                <strong>
+                    Logistic Regression
+                </strong>
+
+
+                <p>
+
+                    Linear classification comparison model.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+<!-- MODEL COMPARISON -->
+<!-- ====================================== -->
+
+<div class="news-card">
+
+    <h2>📊 Model Comparison</h2>
+
+    <p>
+        Accuracy comparison of different machine-learning
+        models on the historical test dataset.
+    </p>
+
+
+    <!-- MODEL PERFORMANCE TABLE -->
+
+    <h3>📋 Model Performance</h3>
+
+    <table style="
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+    ">
+
+        <thead>
+
+            <tr style="
+                background: #1f2937;
+                color: white;
+            ">
+
+                <th style="
+                    padding: 12px;
+                    text-align: left;
+                ">
+                    Model
+                </th>
+
+
+                <th style="
+                    padding: 12px;
+                    text-align: center;
+                ">
+                    Accuracy
+                </th>
+
+                <th style="
+    padding: 12px;
+    text-align: center;
+">
+    Precision
+</th>
+
+<th style="
+    padding: 12px;
+    text-align: center;
+">
+    Recall
+</th>
+
+<th style="
+    padding: 12px;
+    text-align: center;
+">
+    F1 Score
+</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+    {% for model in data.model_comparison %}
+
+    <tr style="
+        border-bottom: 1px solid #ddd;
+    ">
+
+        <td style="
+            padding: 12px;
+        ">
+            {{ model.model }}
+        </td>
+
+        <td style="
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        ">
+            {{ model.accuracy }}%
+        </td>
+
+        <td style="
+            padding: 12px;
+            text-align: center;
+        ">
+            {{ model.precision }}%
+        </td>
+
+        <td style="
+            padding: 12px;
+            text-align: center;
+        ">
+            {{ model.recall }}%
+        </td>
+
+        <td style="
+            padding: 12px;
+            text-align: center;
+        ">
+            {{ model.f1_score }}%
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</tbody>
+
+    </table>
+
+    <!-- CONFUSION MATRIX -->
+
+<h3>🧩 Confusion Matrix</h3>
+
+<p>
+    Confusion matrix shows the correct and incorrect predictions
+    made by each machine-learning model.
+</p>
+
+{% for model in data.model_comparison %}
+
+<div style="
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+">
+
+    <h4>{{ model.model }}</h4>
+
+    <table style="
+        width: 400px;
+        border-collapse: collapse;
+        margin-top: 15px;
+    ">
+
+        <tr>
+            <th style="
+                padding: 12px;
+                background: #1f2937;
+                color: white;
+            ">
+                Actual / Predicted
+            </th>
+
+            <th style="
+                padding: 12px;
+                background: #1f2937;
+                color: white;
+            ">
+                Down (0)
+            </th>
+
+            <th style="
+                padding: 12px;
+                background: #1f2937;
+                color: white;
+            ">
+                Up (1)
+            </th>
+        </tr>
+
+        <tr>
+            <th style="
+                padding: 12px;
+                background: #f3f4f6;
+            ">
+                Down (0)
+            </th>
+
+            <td style="
+                padding: 15px;
+                text-align: center;
+                font-weight: bold;
+            ">
+                {{ model.confusion_matrix[0][0] }}
+            </td>
+
+            <td style="
+                padding: 15px;
+                text-align: center;
+                font-weight: bold;
+            ">
+                {{ model.confusion_matrix[0][1] }}
+            </td>
+        </tr>
+
+        <tr>
+            <th style="
+                padding: 12px;
+                background: #f3f4f6;
+            ">
+                Up (1)
+            </th>
+
+            <td style="
+                padding: 15px;
+                text-align: center;
+                font-weight: bold;
+            ">
+                {{ model.confusion_matrix[1][0] }}
+            </td>
+
+            <td style="
+                padding: 15px;
+                text-align: center;
+                font-weight: bold;
+            ">
+                {{ model.confusion_matrix[1][1] }}
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+{% endfor %}
+
+
+    <!-- MODEL COMPARISON CHART -->
+
+    <h3>📊 Accuracy Chart</h3>
+
+    <canvas
+        id="modelComparisonChart"
+        data-models='{{ data.model_comparison | tojson | safe }}'
+    ></canvas>
+
+</div>
+
+
+
+        <!-- ====================================== -->
+        <!-- FEATURE IMPORTANCE -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>🧠 Feature Importance</h2>
+
+
+            <p>
+
+                Importance of each feature used by the
+                Random Forest model.
+
+            </p>
+
+
+            <canvas
+                id="featureImportanceChart"
+                data-features='{{ data.feature_importance | tojson | safe }}'
+            ></canvas>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- MODEL DISCLAIMER -->
+        <!-- ====================================== -->
+
+        <div class="news-card">
+
+            <h2>⚠️ Model Disclaimer</h2>
+
+
+            <p>
+
+                Model outputs are experimental predictions
+                based on historical data and selected features.
+                They are not guaranteed future market outcomes
+                or financial advice.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ====================================== -->
+        <!-- EDUCATIONAL DISCLAIMER -->
+        <!-- ====================================== -->
+
+        <p
+            style="
+                text-align: center;
+                color: #666;
+            "
+        >
+
+            Educational/experimental model output —
+            not financial advice.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- ML MODEL CHARTS JAVASCRIPT -->
+    <!-- ====================================== -->
+
+    <script>
+
+
+        // ======================================
+        // MODEL COMPARISON DATA
+        // ======================================
+
+        const modelChart =
+            document.getElementById(
+                "modelComparisonChart"
+            );
+
+
+        const modelData =
+            JSON.parse(
+                modelChart.dataset.models
+            );
+
+
+
+        // ======================================
+        // MODEL COMPARISON CHART
+        // ======================================
+
+        new Chart(
+
+            modelChart,
+
+            {
+
+                type: "bar",
+
+
+                data: {
+
+                    labels: modelData.map(
+
+                        item => item.model
+
+                    ),
+
+
+                    datasets: [
+
+                        {
+
+                            label: "Accuracy (%)",
+
+
+                            data: modelData.map(
+
+                                item => item.accuracy
+
+                            )
+
+                        }
+
+                    ]
+
+                },
+
+
+                options: {
+
+                    responsive: true,
+
+
+                    scales: {
+
+                        y: {
+
+                            beginAtZero: true,
+
+                            max: 100,
+
+
+                            title: {
+
+                                display: true,
+
+                                text: "Accuracy (%)"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        );
+
+
+
+        // ======================================
+        // FEATURE IMPORTANCE DATA
+        // ======================================
+
+        const featureChart =
+            document.getElementById(
+                "featureImportanceChart"
+            );
+
+
+        const featureData =
+            JSON.parse(
+                featureChart.dataset.features
+            );
+
+
+
+        // ======================================
+        // FEATURE IMPORTANCE CHART
+        // ======================================
+
+        new Chart(
+
+            featureChart,
+
+            {
+
+                type: "bar",
+
+
+                data: {
+
+                    labels: featureData.map(
+
+                        item => item.feature
+
+                    ),
+
+
+                    datasets: [
+
+                        {
+
+                            label: "Importance",
+
+
+                            data: featureData.map(
+
+                                item => item.importance
+
+                            )
+
+                        }
+
+                    ]
+
+                },
+
+
+                options: {
+
+                    responsive: true,
+
+
+                    indexAxis: "y",
+
+
+                    scales: {
+
+                        x: {
+
+                            beginAtZero: true,
+
+
+                            title: {
+
+                                display: true,
+
+                                text: "Importance"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

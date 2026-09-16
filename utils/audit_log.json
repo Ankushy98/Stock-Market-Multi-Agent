@@ -1,0 +1,949 @@
+[
+    {
+        "timestamp": "2026-09-15T13:32:58.829885",
+        "agent": "Test Agent",
+        "result": {
+            "status": "success",
+            "message": "Audit logger working"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:48.792043",
+        "agent": "ML Prediction Agent",
+        "result": {
+            "ml_prediction": 0,
+            "predicted_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.076737",
+        "agent": "News Agent",
+        "result": {
+            "news": "bitcoin holds steady as tech stocks decline on ai safety concerns",
+            "sentiment": "Negative",
+            "positive_score": 0,
+            "negative_score": 1
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.078127",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Negative",
+            "positive_score": 0,
+            "negative_score": 1,
+            "market_impact": "Bearish"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.079688",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Bearish",
+            "price_direction": "Down",
+            "predicted_trend": "Strong Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.081418",
+        "agent": "News Agent",
+        "result": {
+            "news": "navya naveli nanda on pressure of bachchan and nanda surname: 'do not want to restrict my identity'",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.082877",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.084234",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.085841",
+        "agent": "News Agent",
+        "result": {
+            "news": "zacks market edge highlights: broadcom, bloom energy, and sandisk",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.087440",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.089057",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.091639",
+        "agent": "News Agent",
+        "result": {
+            "news": "india waives visa fee for thai nationals till december 2027",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.093344",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.095036",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.098277",
+        "agent": "News Agent",
+        "result": {
+            "news": "motilal oswal nasdaq q50 etf jumps 41% in a week even as underlying us stocks fall. what is happening?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.103049",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.105057",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.107268",
+        "agent": "News Agent",
+        "result": {
+            "news": "exercise for 2 months, get luxury fashion gifts: indian woman working in south korea shares unique work culture perk",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.109118",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.111629",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.113708",
+        "agent": "News Agent",
+        "result": {
+            "news": "navya naveli nanda has to track every rupee spent at home on excel sheet. amitabh bachchan's daughter shweta shares family reality",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.116299",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.119291",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.123720",
+        "agent": "News Agent",
+        "result": {
+            "news": "nikkei falls as ai slowdown fears hit softbank and chip shares",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.126408",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.131412",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.133600",
+        "agent": "News Agent",
+        "result": {
+            "news": "global ai stocks slip on concerns over risks - financial times",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.136085",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.140207",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.145079",
+        "agent": "News Agent",
+        "result": {
+            "news": "archer aviation vs. joby aviation: this 1 evtol stock has the better balance sheet",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.148226",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.150649",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T13:47:50.152682",
+        "agent": "Decision Agent",
+        "result": {
+            "news_sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "ml_prediction": "Down",
+            "final_decision": "Moderately Bearish",
+            "confidence": 56.0,
+            "reason": "ML predicted a downward direction, but news sentiment was not strongly negative."
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:51.436043",
+        "agent": "ML Prediction Agent",
+        "result": {
+            "ml_prediction": 0,
+            "predicted_direction": "Down",
+            "SMA_5": 1268.14,
+            "SMA_10": 1289.68,
+            "RSI": 29.83
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.947046",
+        "agent": "News Agent",
+        "result": {
+            "news": "amd is sitting at $515. here is what most u.s. investors should actually do about it.",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.950768",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.954666",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.957263",
+        "agent": "News Agent",
+        "result": {
+            "news": "prediction: arm could be the picks-and-shovels winner of the ai boom",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.961572",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.968383",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.971273",
+        "agent": "News Agent",
+        "result": {
+            "news": "tech stocks drop on warnings about ai as brent oil's price hits $109",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.977337",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.985179",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.991323",
+        "agent": "News Agent",
+        "result": {
+            "news": "amd stock sinks 5.94% to $485.46 as ai slowdown warnings rattle an already volatile chip sector once again",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.996202",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:53.997759",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.000190",
+        "agent": "News Agent",
+        "result": {
+            "news": "nasdaq leads us stocks lower as ai development debate weighs on technology sector: dow jones, s&p, wall street",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.002999",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.005085",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.006926",
+        "agent": "News Agent",
+        "result": {
+            "news": "nvidia shares slide 3.15% as industry calls to slow ai development rattle the chip giant's investors",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.010207",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.012257",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.015312",
+        "agent": "News Agent",
+        "result": {
+            "news": "goldman sachs just supercharged its humanoid robot prediction 5x to 6.5 million by 2035",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.017728",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.019318",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.023440",
+        "agent": "News Agent",
+        "result": {
+            "news": "seagate has real upside left. that does not mean it deserves your money right now.",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.025732",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.027714",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.031644",
+        "agent": "News Agent",
+        "result": {
+            "news": "hewlett packard enterprise stock plunges 9.57% as analyst downgrade ends its blistering ai-fueled rally",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.033664",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.036577",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.039124",
+        "agent": "News Agent",
+        "result": {
+            "news": "oracle\u2019s $664b backlog signals massive opportunity for dell and hpe",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.041982",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.045118",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:30:54.047901",
+        "agent": "Decision Agent",
+        "result": {
+            "news_sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "ml_prediction": "Down",
+            "final_decision": "Moderately Bearish",
+            "confidence": 56.0,
+            "reason": "ML predicted a downward direction, but news sentiment was not strongly negative."
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:57.901540",
+        "agent": "ML Prediction Agent",
+        "result": {
+            "ml_prediction": 0,
+            "predicted_direction": "Down",
+            "SMA_5": 1268.14,
+            "SMA_10": 1289.68,
+            "RSI": 29.83
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.440314",
+        "agent": "News Agent",
+        "result": {
+            "news": "7 usb mini gadgets that just work",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.446747",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.457592",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.467580",
+        "agent": "News Agent",
+        "result": {
+            "news": "ai drug discovery market projected to reach $13.8 billion by 2033",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.474877",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.477948",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.483163",
+        "agent": "News Agent",
+        "result": {
+            "news": "canada faces economic challenges after mark carney suspends trade talks with trump",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.487266",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.489580",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.490974",
+        "agent": "News Agent",
+        "result": {
+            "news": "\u2018nobody can replace\u2019 russia in india\u2019s defense ties \u2013 ex-brahmos chief (video)",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.494852",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.498012",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.501362",
+        "agent": "News Agent",
+        "result": {
+            "news": "scibase publishes information document regarding the rights issue",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.503071",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.504509",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.508818",
+        "agent": "News Agent",
+        "result": {
+            "news": "ril-arm model economic township ltd appoints manish jaiswal as ceo",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.511378",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.514568",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.517125",
+        "agent": "News Agent",
+        "result": {
+            "news": "troilus mining corp. added to vaneck junior gold miners etf (gdxj)",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.518640",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.522031",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.524678",
+        "agent": "News Agent",
+        "result": {
+            "news": "indonesia, new zealand expand renewable energy program in maluku",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.528501",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.530950",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.532549",
+        "agent": "News Agent",
+        "result": {
+            "news": "ports giant dp world redraws hormuz logistics with truck bet",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.536081",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.538096",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.540939",
+        "agent": "News Agent",
+        "result": {
+            "news": "reliance industries arm model economic township ltd appoints manish jaiswal as ceo",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.544380",
+        "agent": "Market Agent",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.546094",
+        "agent": "Trend Agent",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-15T19:36:58.549699",
+        "agent": "Decision Agent",
+        "result": {
+            "news_sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "ml_prediction": "Down",
+            "final_decision": "Moderately Bearish",
+            "confidence": 56.0,
+            "reason": "ML predicted a downward direction, but news sentiment was not strongly negative."
+        }
+    }
+]
