@@ -102,13 +102,22 @@ class NewsAgent:
         else:
             sentiment = "Neutral"
 
+        total_score = positive_score + negative_score
+        if total_score == 0:confidence_score = 0
+        else:
+            confidence_score = round(
+        (abs(positive_score - negative_score) / total_score) * 100,
+        2
+    )
+
         return {
             "news": news,
             "sentiment": sentiment,
             "positive_score": positive_score,
             "negative_score": negative_score,
             "positive_words_found": positive_matches,
-            "negative_words_found": negative_matches
+            "negative_words_found": negative_matches,
+            "confidence_score": confidence_score,
         }
 
 
