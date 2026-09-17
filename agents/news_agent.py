@@ -9,6 +9,7 @@ class NewsAgent:
     """
 
     def __init__(self):
+
         self.name = "News Agent"
 
         self.positive_words = {
@@ -23,10 +24,10 @@ class NewsAgent:
             "surge": 2,
             "rise": 1,
             "rally": 2,
-"gain": 1,
-"recovery": 1,
-"deal": 1,
-"expansion": 1,
+            "gain": 1,
+            "recovery": 1,
+            "deal": 1,
+            "expansion": 1
         }
 
         self.negative_words = {
@@ -35,16 +36,18 @@ class NewsAgent:
             "decrease": 1,
             "negative": 1,
             "failure": 2,
+            "failed": 2,
+"fail": 2,
             "weak": 1,
             "downgrade": 2,
             "fall": 1,
             "drop": 1,
             "lows": 2,
-"low": 2,
-"debt": 1,
-"risk": 1,
-"concern": 1,
-"crisis": 2,
+            "low": 2,
+            "debt": 1,
+            "risk": 1,
+            "concern": 1,
+            "crisis": 2
         }
 
         self.negation_words = {
@@ -64,71 +67,106 @@ class NewsAgent:
         positive_matches = []
         negative_matches = []
 
-        # Tokenize news text
+        # Tokenize news
         words = re.findall(r"\b\w+\b", news)
 
-        # Sentiment analysis with negation handling
+        # Sentiment analysis
         for index, word in enumerate(words):
 
-            previous_words = words[max(0, index - 3):index]
+            previous_word = ""
 
-            is_negated = any(
-                negation in previous_words
-                for negation in self.negation_words
+            if index > 0:
+                previous_word = words[index - 1]
+
+            is_negated = (
+                previous_word in self.negation_words
             )
 
+            # Positive word
             if word in self.positive_words:
 
                 weight = self.positive_words[word]
 
                 if is_negated:
+
                     negative_score += weight
+
                     negative_matches.append(
                         f"not_{word}"
                     )
+
                 else:
+
                     positive_score += weight
+
                     positive_matches.append(word)
 
+            # Negative word
             elif word in self.negative_words:
 
                 weight = self.negative_words[word]
 
                 if is_negated:
+
                     positive_score += weight
+
                     positive_matches.append(
                         f"not_{word}"
                     )
+
                 else:
+
                     negative_score += weight
+
                     negative_matches.append(word)
 
         # Sentiment decision
         if positive_score > negative_score:
+
             sentiment = "Positive"
 
         elif negative_score > positive_score:
+
             sentiment = "Negative"
 
         else:
+
             sentiment = "Neutral"
 
+        # Confidence score
         total_score = positive_score + negative_score
-        if total_score == 0:confidence_score = 0
+
+        if total_score == 0:
+
+            confidence_score = 0
+
         else:
+
             confidence_score = round(
-        (abs(positive_score - negative_score) / total_score) * 100,
-        2
-    )
+                (
+                    abs(
+                        positive_score - negative_score
+                    ) / total_score
+                ) * 100,
+                2
+            )
 
         return {
+
             "news": news,
+
             "sentiment": sentiment,
+
             "positive_score": positive_score,
+
             "negative_score": negative_score,
+
             "positive_words_found": positive_matches,
+
             "negative_words_found": negative_matches,
-            "confidence_score": confidence_score,
+
+            "confidence_score": confidence_score
+
         }
 
 

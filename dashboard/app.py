@@ -126,19 +126,36 @@ def home():
 
             overall_sentiment = "Neutral"
 
+            # Confidence Score
+            total_score = total_positive_score + total_negative_score
+            if total_score == 0:
+                confidence_score = 0
+            else:
+                confidence_score = round(
+        (
+            abs(
+                total_positive_score - total_negative_score
+            ) / total_score
+        ) * 100,
+        2
+    )
+
 
         news_result = {
 
-            "sentiment":
-                overall_sentiment,
+    "sentiment":
+        overall_sentiment,
 
-            "positive_score":
-                total_positive_score,
+    "positive_score":
+        total_positive_score,
 
-            "negative_score":
-                total_negative_score
+    "negative_score":
+        total_negative_score,
 
-        }
+    "confidence_score":
+        confidence_score
+
+}
 
 
     else:
@@ -150,17 +167,19 @@ def home():
 
         news_result = {
 
-            "sentiment":
-                "Neutral",
+    "sentiment":
+        "Neutral",
 
-            "positive_score":
-                0,
+    "positive_score":
+        0,
 
-            "negative_score":
-                0
+    "negative_score":
+        0,
 
-        }
+    "confidence_score":
+        0
 
+}
 
     # ======================================
     # MARKET AGENT
@@ -342,10 +361,7 @@ def home():
         # Agent results
 
         "news_agent":
-            news_result.get(
-                "sentiment",
-                "Neutral"
-            ),
+    news_result,
 
 
         "market_agent":

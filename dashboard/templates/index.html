@@ -446,11 +446,17 @@
                     <h3>📰 News Agent</h3>
 
 
-                    <div class="value">
+                  <div class="value">
 
-                        {{ data.news_agent }}
+    Sentiment:
+    {{ data.news_agent.sentiment }}
 
-                    </div>
+    <br>
+
+    Confidence:
+    {{ data.news_agent.confidence_score }}%
+
+</div>
 
                 </div>
 
