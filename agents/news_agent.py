@@ -27,7 +27,14 @@ class NewsAgent:
             "gain": 1,
             "recovery": 1,
             "deal": 1,
-            "expansion": 1
+            "expansion": 1,
+            "partners": 2,
+"partnership": 2,
+"jump": 2,
+"lift": 1,
+"spotlight": 1,
+"next-gen": 1,
+"expansion": 2,
         }
 
         self.negative_words = {

@@ -471,9 +471,20 @@
 
                     <div class="value">
 
-                        {{ data.market_agent }}
+    Impact:
+    {{ data.market_agent.market_impact }}
 
-                    </div>
+    <br>
+
+    Stock Change:
+    {{ data.market_agent.change_percent }}%
+
+    <br>
+
+    Direction:
+    {{ data.market_agent.stock_direction }}
+
+</div>
 
                 </div>
 

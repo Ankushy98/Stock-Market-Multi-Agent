@@ -9,16 +9,30 @@ load_dotenv()
 
 class NewsCollector:
 
-    def __init__(self):
+    def __init__(self, symbol="RELIANCE.NS"):
 
         self.name = "News Collector Agent"
 
         self.api_key = os.getenv("NEWS_API_KEY")
 
+        self.symbol = symbol.upper()
+
+        self.company_names = {
+            "RELIANCE.NS": "Reliance Industries",
+            "TCS.NS": "Tata Consultancy Services",
+            "INFY.NS": "Infosys",
+            "HDFCBANK.NS": "HDFC Bank",
+            "ICICIBANK.NS": "ICICI Bank"
+        }
+
+        self.company_name = self.company_names.get(
+            self.symbol,
+            self.symbol.replace(".NS", "")
+        )
+
         self.company_keywords = [
-            "reliance",
-            "reliance industries",
-            "ril"
+            self.company_name.lower(),
+            self.symbol.replace(".NS", "").lower()
         ]
 
         self.finance_keywords = [
@@ -35,7 +49,11 @@ class NewsCollector:
             "finance",
             "earnings",
             "growth",
-            "industry"
+            "industry",
+            "quarter",
+            "results",
+            "deal",
+            "rally"
         ]
 
     def is_relevant_news(self, title):
@@ -54,7 +72,21 @@ class NewsCollector:
 
         return company_found and finance_found
 
-    def collect_news(self):
+    def collect_news(self, symbol=None):
+
+        if symbol:
+
+            self.symbol = symbol.upper()
+
+            self.company_name = self.company_names.get(
+                self.symbol,
+                self.symbol.replace(".NS", "")
+            )
+
+            self.company_keywords = [
+                self.company_name.lower(),
+                self.symbol.replace(".NS", "").lower()
+            ]
 
         url = "https://newsapi.org/v2/everything"
 
@@ -63,7 +95,7 @@ class NewsCollector:
         }
 
         params = {
-            "q": '"Reliance Industries"',
+            "q": f'"{self.company_name}"',
             "language": "en",
             "sortBy": "publishedAt",
             "pageSize": 20
@@ -112,7 +144,7 @@ class NewsCollector:
 
 if __name__ == "__main__":
 
-    collector = NewsCollector()
+    collector = NewsCollector("TCS.NS")
 
     news_list = collector.collect_news()
 

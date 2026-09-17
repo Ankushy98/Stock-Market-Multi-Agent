@@ -60,9 +60,9 @@ def home():
     # NEWS COLLECTION
     # ======================================
 
-    collector = NewsCollector()
+    collector = NewsCollector(symbol)
 
-    news_list = collector.collect_news()
+    news_list = collector.collect_news(symbol)
 
 
     news_agent = NewsAgent()
@@ -77,6 +77,7 @@ def home():
         positive_news = 0
         negative_news = 0
         neutral_news = 0
+        confidence_score = 0
 
         total_positive_score = 0
         total_negative_score = 0
@@ -186,8 +187,9 @@ def home():
     # ======================================
 
     market_result = market_agent(
-        news_result
-    )
+    news_result,
+    stock_result
+)
 
 
     # ======================================
@@ -364,11 +366,8 @@ def home():
     news_result,
 
 
-        "market_agent":
-            market_result.get(
-                "market_impact",
-                "Neutral"
-            ),
+       "market_agent":
+    market_result,
 
 
         "trend_agent":
