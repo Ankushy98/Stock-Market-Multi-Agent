@@ -21,7 +21,12 @@ class NewsAgent:
             "revenue": 1,
             "upgrade": 2,
             "surge": 2,
-            "rise": 1
+            "rise": 1,
+            "rally": 2,
+"gain": 1,
+"recovery": 1,
+"deal": 1,
+"expansion": 1,
         }
 
         self.negative_words = {
@@ -33,7 +38,13 @@ class NewsAgent:
             "weak": 1,
             "downgrade": 2,
             "fall": 1,
-            "drop": 1
+            "drop": 1,
+            "lows": 2,
+"low": 2,
+"debt": 1,
+"risk": 1,
+"concern": 1,
+"crisis": 2,
         }
 
         self.negation_words = {
