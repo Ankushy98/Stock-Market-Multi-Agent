@@ -1,5 +1,5 @@
+
 import pandas as pd
-import joblib
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -15,8 +15,7 @@ from sklearn.metrics import (
 )
 
 
-DATA_PATH = "data/reliance_ml_dataset.csv"
-MODEL_PATH = "models/random_forest_model.pkl"
+DATA_PATH = "data/multi_stock_ml_dataset.csv"
 
 FEATURES = [
     "Open",
@@ -32,15 +31,21 @@ FEATURES = [
 ]
 
 
-def get_ml_analysis():
+def get_ml_analysis(symbol=None):
 
-    # Load dataset
+    # Load multi-stock dataset
     data = pd.read_csv(DATA_PATH)
+
+    # Filter selected stock
+    if symbol:
+        stock_data = data[data["Symbol"] == symbol]
+
+        if len(stock_data) >= 20:
+            data = stock_data
 
     X = data[FEATURES]
     y = data["Target"]
 
-    # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,
@@ -49,82 +54,66 @@ def get_ml_analysis():
         shuffle=False
     )
 
-    # Models
     models = {
-        "Random Forest":
-            RandomForestClassifier(
-                n_estimators=100,
-                random_state=42
-            ),
+        "Random Forest": RandomForestClassifier(
+            n_estimators=100,
+            random_state=42
+        ),
 
-        "Decision Tree":
-            DecisionTreeClassifier(
-                random_state=42
-            ),
+        "Decision Tree": DecisionTreeClassifier(
+            random_state=42
+        ),
 
-        "Logistic Regression":
-            LogisticRegression(
-                max_iter=1000
-            )
+        "Logistic Regression": LogisticRegression(
+            max_iter=1000
+        )
     }
 
     model_results = []
 
-    # Evaluate every model
     for name, model in models.items():
 
         model.fit(X_train, y_train)
-
         prediction = model.predict(X_test)
-
-        accuracy = accuracy_score(
-            y_test,
-            prediction
-        )
-
-        precision = precision_score(
-            y_test,
-            prediction,
-            zero_division=0
-        )
-
-        recall = recall_score(
-            y_test,
-            prediction,
-            zero_division=0
-        )
-
-        f1 = f1_score(
-            y_test,
-            prediction,
-            zero_division=0
-        )
-
-        matrix = confusion_matrix(
-            y_test,
-            prediction
-        )
 
         model_results.append({
             "model": name,
-            "accuracy": round(accuracy * 100, 2),
-            "precision": round(precision * 100, 2),
-            "recall": round(recall * 100, 2),
-            "f1_score": round(f1 * 100, 2),
-            "confusion_matrix": matrix.tolist()
+            "accuracy": round(
+                accuracy_score(y_test, prediction) * 100, 2
+            ),
+            "precision": round(
+                precision_score(
+                    y_test, prediction, zero_division=0
+                ) * 100, 2
+            ),
+            "recall": round(
+                recall_score(
+                    y_test, prediction, zero_division=0
+                ) * 100, 2
+            ),
+            "f1_score": round(
+                f1_score(
+                    y_test, prediction, zero_division=0
+                ) * 100, 2
+            ),
+            "confusion_matrix": confusion_matrix(
+                y_test, prediction
+            ).tolist()
         })
 
-    # Load saved Random Forest
-    saved_model = joblib.load(MODEL_PATH)
+    # Feature importance for selected stock's Random Forest
+    rf_model = RandomForestClassifier(
+        n_estimators=100,
+        random_state=42
+    )
 
-    # Feature importance
-    importance = saved_model.feature_importances_
+    rf_model.fit(X_train, y_train)
 
     feature_results = []
 
     for feature, value in zip(
         FEATURES,
-        importance
+        rf_model.feature_importances_
     ):
         feature_results.append({
             "feature": feature,
@@ -138,32 +127,6 @@ def get_ml_analysis():
 
     return {
         "model_comparison": model_results,
-        "feature_importance": feature_results
+        "feature_importance": feature_results,
+        "symbol": symbol
     }
-
-
-if __name__ == "__main__":
-
-    result = get_ml_analysis()
-
-    print("\n========== MODEL PERFORMANCE ==========")
-
-    for item in result["model_comparison"]:
-
-        print("\nModel:", item["model"])
-        print("Accuracy:", item["accuracy"], "%")
-        print("Precision:", item["precision"], "%")
-        print("Recall:", item["recall"], "%")
-        print("F1 Score:", item["f1_score"], "%")
-        print("Confusion Matrix:")
-        print(item["confusion_matrix"])
-
-    print("\n========== FEATURE IMPORTANCE ==========")
-
-    for item in result["feature_importance"]:
-
-        print(
-            item["feature"],
-            "->",
-            item["importance"]
-        )

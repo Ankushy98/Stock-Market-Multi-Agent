@@ -945,5 +945,1479 @@
             "confidence": 56.0,
             "reason": "ML predicted a downward direction, but news sentiment was not strongly negative."
         }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:35.339669",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.237334",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.241955",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral",
+            "change_percent": 0,
+            "stock_direction": "Unknown"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.243847",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.247293",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.250754",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral",
+            "change_percent": 0,
+            "stock_direction": "Unknown"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.255614",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.258031",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.260329",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Neutral",
+            "change_percent": 0,
+            "stock_direction": "Unknown"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.263081",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Neutral",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T20:55:36.264864",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.060094",
+        "agent": "ML Prediction Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1056.94,
+            "SMA_10": 1056.34,
+            "RSI": 30.46
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.744813",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.749420",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stock alert: tempsens instruments india, infosys, highway infra, alembic pharma",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.751426",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stocks to watch: mazagon dock, jsw energy, highway infra, fortis & infosys",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.754630",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.757609",
+        "agent": "Market Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -0.68,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.762900",
+        "agent": "Trend Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:37:50.766782",
+        "agent": "Decision Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:00.394580",
+        "agent": "ML Prediction Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 2187.12,
+            "SMA_10": 2207.4,
+            "RSI": 12.94
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:01.913266",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:01.915928",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "tcs partners with dubai gold & commodities exchange for next-gen derivatives market infrastructure",
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "positive_words_found": [
+                "partners"
+            ],
+            "negative_words_found": [],
+            "confidence_score": 100.0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:01.917853",
+        "agent": "Market Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "market_impact": "Mixed Signal",
+            "change_percent": -3.88,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:01.919666",
+        "agent": "Trend Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "market_impact": "Mixed Signal",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:38:01.921526",
+        "agent": "Decision Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "final_decision": "Positive Signal",
+            "confidence": 66.67,
+            "score": 2,
+            "reason": "News sentiment is positive. ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:46.949883",
+        "agent": "ML Prediction Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1056.94,
+            "SMA_10": 1056.34,
+            "RSI": 30.46
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.299851",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.302124",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stock alert: tempsens instruments india, infosys, highway infra, alembic pharma",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.305557",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stocks to watch: mazagon dock, jsw energy, highway infra, fortis & infosys",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.307905",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.309649",
+        "agent": "Market Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -0.68,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.311184",
+        "agent": "Trend Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-18T21:46:48.312707",
+        "agent": "Decision Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.035112",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.681197",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.688458",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.695317",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.702725",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.712676",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:45:47.721972",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:53.617883",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.153366",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.162801",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.173481",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.184867",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.198287",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:52:54.210815",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.127877",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.626344",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.634048",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.643320",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.656631",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.670317",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:15.683320",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:23.733603",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.281787",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.290845",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.303135",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.314558",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.328111",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:24.341233",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:47.505471",
+        "agent": "ML Prediction Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 2187.12,
+            "SMA_10": 2207.4,
+            "RSI": 12.94
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.139447",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "n chandrasekaran's five-year extension lifts tata stocks, but not tcs",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.149118",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.160917",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "tcs partners with dubai gold & commodities exchange for next-gen derivatives market infrastructure",
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "positive_words_found": [
+                "partners"
+            ],
+            "negative_words_found": [],
+            "confidence_score": 100.0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.176834",
+        "agent": "Market Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "market_impact": "Mixed Signal",
+            "change_percent": -3.88,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.189679",
+        "agent": "Trend Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "market_impact": "Mixed Signal",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:55:48.200051",
+        "agent": "Decision Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "final_decision": "Positive Signal",
+            "confidence": 66.67,
+            "score": 2,
+            "reason": "News sentiment is positive. ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:45.841648",
+        "agent": "ML Prediction Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1056.94,
+            "SMA_10": 1056.34,
+            "RSI": 30.46
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.508244",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.519604",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stock alert: tempsens instruments india, infosys, highway infra, alembic pharma",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.535298",
+        "agent": "News Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "news": "stocks to watch: mazagon dock, jsw energy, highway infra, fortis & infosys",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.549098",
+        "agent": "Market Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -0.68,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.561349",
+        "agent": "Trend Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:56:46.573287",
+        "agent": "Decision Agent",
+        "symbol": "INFY.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:23.766378",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.512322",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.522644",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.534026",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.543736",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.560672",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T07:59:24.574465",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:19.984915",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.526901",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.536175",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.548393",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.580702",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.608718",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:00:20.637092",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:57.873320",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.358997",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.370502",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.384026",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.404263",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.418388",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:07:58.430552",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.225839",
+        "agent": "ML Prediction Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 2187.12,
+            "SMA_10": 2207.4,
+            "RSI": 12.94
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.826102",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "n chandrasekaran's five-year extension lifts tata stocks, but not tcs",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.836157",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "infosys, tcs, other it stocks in focus after first fed rate hike in 3 years. will inflationary pressures offset anti-ai euphoria?",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.849509",
+        "agent": "News Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "news": "tcs partners with dubai gold & commodities exchange for next-gen derivatives market infrastructure",
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "positive_words_found": [
+                "partners"
+            ],
+            "negative_words_found": [],
+            "confidence_score": 100.0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.865407",
+        "agent": "Market Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "sentiment": "Positive",
+            "positive_score": 2,
+            "negative_score": 0,
+            "market_impact": "Mixed Signal",
+            "change_percent": -3.88,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.882090",
+        "agent": "Trend Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "market_impact": "Mixed Signal",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:09:47.895574",
+        "agent": "Decision Agent",
+        "symbol": "TCS.NS",
+        "result": {
+            "final_decision": "Positive Signal",
+            "confidence": 66.67,
+            "score": 2,
+            "reason": "News sentiment is positive. ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:03.548497",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.208566",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.222309",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.236710",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.251016",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.264093",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:10:04.298567",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:20.937278",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.759938",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.773354",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.792237",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.810027",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.822620",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T08:16:21.836526",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
     }
 ]

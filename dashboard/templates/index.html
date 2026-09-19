@@ -749,6 +749,41 @@
         </div>
 
 
+        
+<!-- ====================================== -->
+<!-- FINAL DECISION -->
+<!-- ====================================== -->
+
+<div class="news-card decision-card">
+
+    <h2>🎯 Final Decision</h2>
+
+    <div class="decision-box">
+
+        <h3>
+            {{ data.decision }}
+        </h3>
+
+        <p>
+            Confidence:
+            <strong>{{ data.confidence }}%</strong>
+        </p>
+
+        <p>
+            Stock:
+            <strong>{{ data.symbol }}</strong>
+        </p>
+
+        <small>
+            This is an AI-generated educational signal,
+            not financial advice.
+        </small>
+
+    </div>
+
+</div>
+
+
 
         <!-- ====================================== -->
         <!-- AGENT PIPELINE STATUS -->
@@ -871,141 +906,162 @@
 
 
 
-        <!-- ====================================== -->
-        <!-- AGENT AUDIT TRAIL -->
-        <!-- ====================================== -->
+        
+<!-- ====================================== -->
+<!-- AGENT AUDIT TRAIL -->
+<!-- ====================================== -->
 
-        <div class="news-card">
+<div class="news-card">
 
-            <h2>🔍 Agent Audit Trail</h2>
+    <h2>🔍 Agent Audit Trail - {{ data.symbol }}</h2>
+
+    {% if data.audit_logs %}
+
+        {% for log in data.audit_logs | reverse %}
+
+            <div class="news-item">
+
+                <h3>
+                    🤖 {{ log.agent }}
+                </h3>
+
+                <p>
+                    <small>
+                        🕒 {{ log.timestamp }}
+                    </small>
+                </p>
+
+                <div class="audit-result">
+
+                    {% if log.result %}
+
+                        <ul>
+
+                            {% for key, value in log.result.items() %}
+
+                                <li>
+                                    <strong>
+                                        {{ key | replace("_", " ") | title }}:
+                                    </strong>
+
+                                    {{ value }}
+
+                                </li>
+
+                            {% endfor %}
+
+                        </ul>
+
+                    {% else %}
+
+                        <p>No result details available.</p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="news-item">
+
+            <p>
+                No audit logs available for {{ data.symbol }}.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</div>
 
 
-            {% if data.audit_logs %}
+        
+<!-- ====================================== -->
+<!-- ML MODEL ANALYSIS -->
+<!-- ====================================== -->
+
+<div class="news-card">
+
+    <h2>🤖 ML Model Analysis</h2>
+
+    <p>
+        The machine-learning pipeline is trained and evaluated
+        using historical data for the selected stock:
+        <strong>{{ data.symbol }}</strong>.
+    </p>
 
 
-                {% for log in data.audit_logs | reverse %}
+    {% if data.model_comparison %}
+
+        {% for model in data.model_comparison %}
+
+            <div class="news-item">
+
+                <strong>
+                    {{ model.model }}
+                </strong>
+
+                <p>
+                    Model Accuracy:
+                    <strong>
+                        {{ model.accuracy }}%
+                    </strong>
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="news-item">
+
+            <p>
+                Model comparison data is not available
+                for this stock.
+            </p>
+
+        </div>
+
+    {% endif %}
 
 
-                    <div class="news-item">
+    <div class="news-item">
 
+        <strong>Feature Importance</strong>
 
-                        <strong>
+        {% if data.feature_importance %}
 
-                            🤖 {{ log.agent }}
+            <ul>
 
-                        </strong>
+                {% for feature in data.feature_importance %}
 
-
-                        <br>
-
-
-                        <small>
-
-                            🕒 {{ log.timestamp }}
-
-                        </small>
-
-
-                        <pre>
-{{ log.result | tojson(indent=2) }}
-                        </pre>
-
-
-                    </div>
-
+                    <li>
+                        {{ feature.feature }}:
+                        {{ feature.importance }}
+                    </li>
 
                 {% endfor %}
 
+            </ul>
 
-            {% else %}
+        {% else %}
 
+            <p>
+                Feature importance data is unavailable.
+            </p>
 
-                <p>
+        {% endif %}
 
-                    No audit logs available.
+    </div>
 
-                </p>
+</div>
 
-
-            {% endif %}
-
-
-        </div>
-
-
-
-        <!-- ====================================== -->
-        <!-- ML MODEL ANALYSIS -->
-        <!-- ====================================== -->
-
-        <div class="news-card">
-
-            <h2>🤖 ML Model Analysis</h2>
-
-
-           <p>
-    The current machine-learning pipeline is trained and evaluated
-    using historical Reliance Industries stock data.
-</p>
-
-
-
-            <div class="news-item">
-
-                <strong>
-                    Random Forest
-                </strong>
-
-
-                <p>
-
-                    Primary model used by the
-                    prediction agent.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="news-item">
-
-                <strong>
-                    Decision Tree
-                </strong>
-
-
-                <p>
-
-                    Baseline tree-based comparison model.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="news-item">
-
-                <strong>
-                    Logistic Regression
-                </strong>
-
-
-                <p>
-
-                    Linear classification comparison model.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- ====================================== -->
+<!-- ====================================== -->
 <!-- MODEL COMPARISON -->
 <!-- ====================================== -->
 

@@ -6,11 +6,12 @@ import os
 LOG_FILE = "utils/audit_log.json"
 
 
-def log_agent_result(agent_name, result):
+def log_agent_result(agent_name, result, symbol=None):
 
     log_entry = {
         "timestamp": datetime.now().isoformat(),
         "agent": agent_name,
+        "symbol": symbol,
         "result": result
     }
 
@@ -41,7 +42,8 @@ if __name__ == "__main__":
 
     log_agent_result(
         "Test Agent",
-        test_result
+        test_result,
+        "RELIANCE.NS"
     )
 
     print("Audit log created successfully!")

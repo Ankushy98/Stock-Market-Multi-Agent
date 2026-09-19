@@ -33,7 +33,7 @@ print(stock_result)
 print("\n========== ML PREDICTION ==========")
 
 ml_result = predict_stock_direction(stock_result)
-log_agent_result("ML Prediction Agent", ml_result)
+log_agent_result("ML Prediction Agent", ml_result, symbol)
 
 print(ml_result)
 
@@ -65,7 +65,7 @@ for i, news in enumerate(news_list, start=1):
 
     # News Agent
     news_result = news_agent.analyze_news(news)
-    log_agent_result("News Agent", news_result)
+    log_agent_result("News Agent", news_result, symbol)
 
     print("\n--- NEWS AGENT ---")
     print(news_result)
@@ -73,7 +73,7 @@ for i, news in enumerate(news_list, start=1):
 
     # Market Agent
     market_result = market_agent(news_result)
-    log_agent_result("Market Agent", market_result)
+    log_agent_result("Market Agent", market_result, symbol)
 
     print("\n--- MARKET AGENT ---")
     print(market_result)
@@ -81,7 +81,7 @@ for i, news in enumerate(news_list, start=1):
 
     # Trend Agent
     trend_result = trend_agent(market_result,stock_result)
-    log_agent_result("Trend Agent", trend_result)
+    log_agent_result("Trend Agent", trend_result, symbol)
 
     print("\n--- TREND AGENT ---")
     print(trend_result)
@@ -89,7 +89,7 @@ for i, news in enumerate(news_list, start=1):
 
    # Decision Agent
 decision_result = decision_agent(news_result,ml_result,market_result)
-log_agent_result("Decision Agent", decision_result)
+log_agent_result("Decision Agent", decision_result, symbol)
 
 print("\n--- DECISION AGENT ---")
 print(decision_result)

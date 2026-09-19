@@ -1,0 +1,114 @@
+
+/* ======================================
+   AGENT AUDIT TRAIL
+====================================== */
+
+.audit-result {
+    background: #f7f9fc;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.audit-result ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.audit-result li {
+    margin: 8px 0;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.news-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.news-item small {
+    color: #6b7280;
+}
+
+
+/* ======================================
+   DECISION CARD
+====================================== */
+
+.decision-card {
+    text-align: center;
+}
+
+.decision-box {
+    padding: 25px;
+    margin-top: 15px;
+    border-radius: 12px;
+    background: #eef4ff;
+    border: 2px solid #2563eb;
+}
+
+.decision-box h3 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #1d4ed8;
+}
+
+.decision-box p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.decision-box small {
+    display: block;
+    margin-top: 18px;
+    color: #6b7280;
+}
+
+
+/* ======================================
+   STOCK SEARCH
+====================================== */
+
+.search-card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.search-card form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.search-card input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-card button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-card button:hover {
+    background: #1d4ed8;
+}
+
+.search-card p {
+    color: #6b7280;
+    font-size: 14px;
+}
