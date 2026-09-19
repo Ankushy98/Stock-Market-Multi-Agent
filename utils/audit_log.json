@@ -2419,5 +2419,169 @@
             "score": 1,
             "reason": "ML model predicted upward direction."
         }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:30.953993",
+        "agent": "ML Prediction Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 1240.62,
+            "SMA_10": 1261.8,
+            "RSI": 35.87
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.612258",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries shares in focus as govt slashes windfall tax on fuel exports; stock down 21% in 2026 so far",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.615433",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "buzzing stocks for sept 17: reliance, infosys, krsnaa, mazagon dock, motilal oswal, granules, fine organic chem, venus pipes, highway infra",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.618557",
+        "agent": "News Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "news": "reliance industries to raise rs 12,500 crore via five-year bonds",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.621948",
+        "agent": "Market Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "market_impact": "Negative Price Movement",
+            "change_percent": -1.41,
+            "stock_direction": "Down"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.624972",
+        "agent": "Trend Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "market_impact": "Negative Price Movement",
+            "price_direction": "Down",
+            "predicted_trend": "Downtrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:09:31.630875",
+        "agent": "Decision Agent",
+        "symbol": "RELIANCE.NS",
+        "result": {
+            "final_decision": "Mixed Signal",
+            "confidence": 33.33,
+            "score": 1,
+            "reason": "ML model predicted upward direction."
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:11.499024",
+        "agent": "ML Prediction Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "ml_prediction": 1,
+            "predicted_direction": "Up",
+            "SMA_5": 718.06,
+            "SMA_10": 709.29,
+            "RSI": 59.89
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:12.001172",
+        "agent": "News Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "news": "hdfc bank shares gain over 1%",
+            "sentiment": "Positive",
+            "positive_score": 1,
+            "negative_score": 0,
+            "positive_words_found": [
+                "gain"
+            ],
+            "negative_words_found": [],
+            "confidence_score": 100.0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:12.009780",
+        "agent": "News Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "news": "hdfc bank limited (hdb) shareholders who lost money have opportunity to lead securities fraud lawsuit",
+            "sentiment": "Neutral",
+            "positive_score": 0,
+            "negative_score": 0,
+            "positive_words_found": [],
+            "negative_words_found": [],
+            "confidence_score": 0
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:12.016778",
+        "agent": "Market Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "sentiment": "Positive",
+            "positive_score": 1,
+            "negative_score": 0,
+            "market_impact": "Bullish",
+            "change_percent": 2.52,
+            "stock_direction": "Up"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:12.020922",
+        "agent": "Trend Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "market_impact": "Bullish",
+            "price_direction": "Up",
+            "predicted_trend": "Strong Uptrend"
+        }
+    },
+    {
+        "timestamp": "2026-09-19T13:10:12.028692",
+        "agent": "Decision Agent",
+        "symbol": "HDFCBANK.NS",
+        "result": {
+            "final_decision": "Positive Signal",
+            "confidence": 100.0,
+            "score": 3,
+            "reason": "News sentiment is positive. ML model predicted upward direction. Market agent detected bullish impact."
+        }
     }
 ]
