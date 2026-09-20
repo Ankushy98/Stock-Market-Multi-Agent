@@ -237,3 +237,29 @@ Users can enter stock symbols dynamically, for example:
 - MSFT — Microsoft
 
 **Note:** Availability depends on the market-data source, valid ticker format, and available historical data.
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[User enters Stock Symbol] --> B[Market Data Agent]
+
+    B --> C[ML Prediction Agent]
+    B --> D[News Collector]
+
+    D --> E[News Agent]
+    E --> F[Market Agent]
+    F --> G[Trend Agent]
+
+    C --> H[Decision Agent]
+    E --> H
+    F --> H
+    G --> H
+
+    H --> I[Final Signal and Confidence]
+
+    I --> J[Dashboard]
+    E --> K[Audit Logger]
+    F --> K
+    G --> K
+    H --> K
